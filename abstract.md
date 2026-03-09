@@ -1,0 +1,7 @@
+# Integrating fisheries survey data: theory, practice, and open questions
+
+Analysts are increasingly turning to model-based approaches to join datasets from neighbouring surveys, combine data across different gear types, or account for gear changes within a single survey. When applied carefully, these methods can improve precision and accuracy in index estimation and distribution modelling. In this talk, I will cover the theory behind data integration—including same- versus expanded-domain integration, accounting for catchability vs. length selectivity, spatially varying catchability, and combining different data types—along with the practical implications of the various approaches. I will briefly demonstrate how to implement these methods using sdmTMB. I will close by discussing what we should consider before integrating survey data, along with open questions about the limitations of these approaches.
+
+# Breakout
+
+I'd be happy to lead a breakout group exploring the strengths, weaknesses, and limits of model-based approaches to survey data standardization and data integration (as discussed by email). Topics could include accounting for episodic or systematic loss of survey domain, integrating data across surveys or gear types, and related challenges. When are these approaches warranted? How do we as a field determine their limits? And how do we progress towards a principled set of best practices?
