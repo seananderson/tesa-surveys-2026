@@ -1,0 +1,47 @@
+# Breakout group summary: Future work plan on survey data standardization and integration
+
+Participants: Sean Anderson, Mackenzie Mazur, Meghan Burton, Kimberly Fitzpatrick, Hugues Benoît, Jackie King, Amy Tabata, Cameron Freshwater, Brendan Aulthouse, Natalie Asselin, and Marianne Marcoux.
+
+## Overview
+
+The group developed a set of recommended potential activities to advance survey data standardization and integration at DFO. These recommendations emerged from two days of discussion and are organized around seven priority areas.
+
+## Best practices for spatiotemporal modelling (TESA working group and workshop)
+
+The group recommended a two-phase approach to developing best practices for spatiotemporal model-based survey standardization. The first phase would be a blind simulation and modelling exercise, structured as a TESA working group, in which multiple regional teams independently fit the same simulated dataset without knowledge of the underlying data-generating process. This exercise would reveal how modelling choices differ across analysts and regions, providing insight into the sensitivity of results to analyst decisions. The simulated data would be generated using tools such as 'SimSurvey' or bespoke code and would aim to be broadly representative, encompassing different survey types (e.g., trawl, dive, trap), species ecologies, and including covariates that modellers would need to select from. The data would also include challenges such as gear changes within the time series. Each region would assemble a small team including analysts at different levels of expertise, and the primary output would be a standardized index of abundance.
+
+The results of the blind exercise would then kick off the second phase: a TESA workshop to develop a best practices paper. Participants would contrast and compare their modelling decisions at a workshop, and the insights would motivate and inform a best practices publication.
+
+## Simulations to evaluate survey changes (TESA working group and workshop)
+
+The group recommended establishing a working group focused on simulation-based evaluation of the consequences of changes to existing surveys. Two complementary approaches were proposed: (1) data resampling and degradation exercises, in which historically rich datasets are deliberately reduced to mimic current or projected data-poor conditions, and (2) simulations from a model with known truth under different assumptions about uncertainties.
+
+Two initial case studies were proposed: a large-scale survey with a long time series, suitable for data degradation and restratification experiments, and an invertebrate species that requires borrowing information from external data sources. Because survey performance is species-specific, simulations should consider species with multi-year life cycles and situations where surveys must serve multiple species simultaneously. Data degradation experiments were seen as particularly valuable for evaluating the consequences of reduced sampling effort, changed survey designs, or loss of biological sampling (e.g., length and age data) on management advice. Such exercises would also help communicate to managers the costs of reducing survey coverage. Additional simulation priorities include evaluating the effects of preferential sampling and assessing trade-offs in spatial allocation of survey effort across strata.
+
+## Survey design course (TESA course)
+
+The group identified a need for a foundational TESA course on survey design principles, targeting personnel who conduct surveys in the field. An existing course on survey design could serve as the basis or springboard, with emphasis adapted to the practicalities of DFO surveys, including implementation constraints. Topics would include basic survey design concepts, the distinction between design-based and model-based estimators, practical limitations of surveys, and decision-making during survey operations. The course should be offered remotely and recorded to maximize accessibility. The goal is to ensure that all staff involved in survey execution have a shared baseline understanding of survey design principles.
+
+## Model-based estimation of survey catch composition (collaborative research)
+
+Developing workable solutions for model-based estimation of survey catch composition was identified as a research priority, building on the challenges discussed on Day 2. The group recommended this be pursued as a focused collaborative research effort rather than a TESA activity, likely resulting in a publication.
+
+## Consequences of choices in sampling composition data (collaborative research)
+
+A related but distinct priority is understanding the consequences of choices in the sampling of composition data and other biological samples and making efficient use of available sampling resources. This would involve closed-loop simulations examining consequences on quantities of management interest. Like the model-based composition work above, this was recommended as a collaborative research effort rather than a TESA activity.
+
+## Multi-regional survey database (TESA workshop and working group)
+
+A TESA workshop or working group focused on creating a multi-regional survey database was recommended. Initial brainstorming for this effort could potentially be added to the terms of reference of the TESA stock assessment output database workshop. It would build on existing initiatives such as the 'surveyjoin' project (Pacific Region DFO and NOAA) and could contribute to broader datasets such as FISHGLOB. Key elements include assembling regional expertise, standardizing data entry and metadata (including both raw and converted data), linking open data portals to improve accessibility, and exploring potential integration with NOAA datasets. The emphasis would be on creating multi-regional datasets that are practical and useful for analysts conducting stock assessments and other analyses.
+
+## Expert oversight and consultancy (TESA committee or workshop)
+
+The group noted the potential utility of a formal expert oversight or consultancy committee to support DFO programs with survey-related questions, similar in spirit to the "4S" committee of the 1970s and 1980s. This group could provide consultation on survey design and model-based standardization, functioning as an in-house statistical resource for DFO science programs. An alternative or complementary approach would be a consultancy workshop focused on survey design problems.
+
+## Introduction to simulations for survey design (TESA course)
+
+In addition to the foundational survey design course, the group recommended a possible TESA course providing an introduction to simulation methods in the context of survey design. This would give analysts the tools to evaluate survey design options and understand the consequences of design changes through simulation.
+
+## Overarching consideration: non-stationarity
+
+The impacts of non-stationarity—arising from climate change and shifting species distributions—were identified as an overarching consideration that cuts across all of the above activities. Simulation exercises, best practices guidance, and survey design evaluations should all account for scenarios in which historical patterns of species distribution and abundance may not hold into the future.

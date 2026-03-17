@@ -1,0 +1,61 @@
+# Breakout Group Summary: Exploring the strengths, weaknesses, and limits of model-based approaches to survey data standardization and data integration
+
+Participants: Sean Anderson, Kimberly Fitzpatrick, Jill Campbell, David Poissant, Natalie Asselin, Brandon Aulthouse, Cameron Freshwater, Hugues Benoît, and Marianne Marcoux.
+
+## Composition data and standardization approaches
+
+The group examined the application of spatiotemporal models to survey data standardization, focusing on both abundance indices and composition data. While these models are widely used for index standardization, their use for age and length composition remains limited, creating a mismatch in how different data types are treated. Given that spatiotemporal approaches already support data integration across surveys and can account for gaps in survey effort, extending them to composition data was seen as a logical next step. Although this is feasible with existing tools such as 'sdmTMB', practical challenges remain, including sparse observations for some age–year combinations, frequent zeros, and instability when many age classes are included. These issues may be less severe for short-lived species. Length-stratified sampling introduces additional complexity, requiring expansion of subsampled biological data to represent the full catch at the tow level (often referred to as "first-stage expansion" at NOAA's Alaska Fisheries Science Center), prior to any further scaling to the survey-domain level.
+
+## Evaluating model performance and limitations
+
+The group discussed how to assess and communicate the limits of spatiotemporal models, identifying four complementary approaches:
+
+::: {custom-style="List Number"}
+
+1. Posterior predictive checking (self-simulation) compares observed data to data simulated from the fitted model; a practical interpretation is a "Turing test," where model adequacy is supported if simulated data are indistinguishable from real observations. 
+
+2. Data degradation uses high-quality datasets that are deliberately reduced to mimic data-poor conditions, allowing evaluation under realistic constraints, albeit without knowledge of the true state.
+
+3. Custom simulation (e.g., via the 'SimSurvey' R package) enables comparison to a known truth but is limited to processes specified by the analyst. 
+
+4. Sensitivity analyses can explore alternative model structures and mesh configurations and therefore provide insight into robustness to modelling decisions.
+
+:::
+
+Several practical considerations were highlighted. Spatiotemporal models are often challenged in areas with strong environmental gradients, where models may oversmooth important variation. As a result, the random effects in spatiotemporal models are generally better suited to broad-scale patterns than fine-scale prediction. Triangle-level covariates on spatial covariance were noted as a potential way to address some of these limitations and research is ongoing in this area. The group also emphasized the distinction between model-based and design-based estimators: while model-based approaches relax assumptions such as within-stratum homogeneity, they shift the burden from perfect survey design implementation to model specification and choice, making sensitivity analyses and model-checking essential.
+
+## Data integration across surveys
+
+The integration of data across surveys was considered in several contexts, including adjacent surveys, overlapping surveys, and surveys covering different depth ranges, as well as increasing use of industry data. While integration can improve coverage, participants emphasized the need to first understand each dataset independently through separate modelling exercises. Furthermore, it was acknowledged that we do not yet understand how some of the more complex modelling options, such as spatially varying catchability, will behave under complex data integration exercises. 
+
+Preferential sampling---where sampling locations depend on prior knowledge of fish distribution---was identified as a concern because it violates core geostatistical assumptions. In practice, its effects are often modest and can be reduced by including relevant covariates that drive the preferential sampling. 
+
+Differences in survey timing present an additional challenge: without overlap in space or time, integration requires strong assumptions about fish behaviour and distribution. Targeted sampling to estimate differences in catchability or selectivity may be needed to support such integration.
+
+## Alternatives to survey data integration
+
+Alternatives to data integration via spatiotemporal models were also discussed. One option is to include multiple indices separately in an assessment model, allowing the model to reconcile them; however, most assessment models do not make use of spatial information and assume each index is proportional to the entire stock. They are left to reconcile this through estimating separate selectivity curves. Spatial assessment models provide another option by partitioning populations and modelling movement, but movement is rarely known and difficult to estimate.
+
+## Future work and recommendations
+
+The group identified several priorities for future work:
+
+::: {custom-style="List Number"}
+
+1. Development of best practices through a continuing working group, including documentation of model-based standardization approaches and potential synthesis publication
+
+1. Focused methodological research on practical strategies for incorporating compositional data into spatiotemporal models
+
+1. Simulation-based evaluation frameworks, including both controlled simulations and coordinated blind simulation exercises to assess consistency across modelling groups
+
+1. Cross-regional data degradation experiments to translate insights from data-rich systems to data-poor contexts
+
+1. Regional case studies demonstrating complete workflows, with emphasis on diagnostics and decision points
+
+1. A workshop on simulation testing, data integration, and model checking prior to stock assessment
+
+1. Targeted collaborative workshops bringing together researchers from neighbouring regions to address shared challenges in survey data integration
+
+1. Improved data sharing and transparency across regions, building on initiatives such as 'surveyjoin' (Pacific Region DFO and NOAA) and its contribution to the internal FISHGLOB dataset
+
+:::

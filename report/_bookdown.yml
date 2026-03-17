@@ -1,0 +1,6 @@
+book_filename: "techreport"
+rmd_files: ["index.Rmd",
+            "day2-report.Rmd",
+            "day3-report.Rmd"
+            ]
+delete_merged_file: true
