@@ -26,7 +26,7 @@ Developing workable solutions for model-based estimation of survey catch composi
 
 ## Consequences of choices in sampling composition data (collaborative research)
 
-A related but distinct priority is understanding the consequences of choices in the sampling of composition data and other biological samples, and making efficient use of available sampling resources. This would involve closed-loop simulations examining consequences on quantities of management interest. Like the model-based composition work above, this was recommended as a collaborative research effort rather than a TESA activity.
+A related but distinct priority is understanding the consequences of choices in the sampling of composition data and other biological samples and making efficient use of available sampling resources. This would involve closed-loop simulations examining consequences on quantities of management interest. Like the model-based composition work above, this was recommended as a collaborative research effort rather than a TESA activity.
 
 ## Multi-regional survey database (TESA workshop and working group)
 
