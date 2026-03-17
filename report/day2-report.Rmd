@@ -2,9 +2,11 @@
 
 Participants: Sean Anderson, Kimberly Fitzpatrick, Jill Campbell, David Poissant, Natalie Asselin, Brendan Aulthouse, Cameron Freshwater, Hugues Benoît, and Marianne Marcoux.
 
+This breakout group explored the strengths, weaknesses, and limits of model-based approaches to survey data standardization and data integration, including accounting for loss of survey domain, integrating data across surveys or gear types, and extending these methods to composition data. Discussion addressed when these approaches are warranted, how to assess and communicate their limits, and how the field can progress toward a principled set of best practices.
+
 ## Composition data and standardization approaches
 
-The group examined the application of spatiotemporal models to survey data standardization, focusing on both abundance indices and composition data. While these models are widely used for index standardization, their use for age and length composition remains limited, creating a mismatch in how different data types are treated. Given that spatiotemporal approaches already support data integration across surveys and can account for gaps in survey effort, the group saw extending them to composition data as a logical next step. Although this is feasible with existing tools such as 'sdmTMB', practical challenges remain, including sparse observations for some age–year combinations, frequent zeros, and instability when many age classes are included. These issues may be less severe for short-lived species. Length-stratified sampling introduces additional complexity, requiring expansion of subsampled biological data to represent the full catch at the tow level (often referred to as "first-stage expansion" at NOAA's Alaska Fisheries Science Center), prior to any further scaling to the survey-domain level.
+The group discussed the application of spatiotemporal models to survey data standardization, focusing on both abundance indices and composition data. While these models are widely used for index standardization, their use for age and length composition remains limited, creating a mismatch in how different data types are treated. Given that spatiotemporal approaches already support data integration across surveys and can account for gaps in survey effort, the group saw extending them to composition data as a logical next step. Although this is feasible with existing tools such as 'sdmTMB', practical challenges remain, including sparse observations for some age–year combinations, frequent zeros, and estimation challenges when many age classes are included. These issues may be less severe for short-lived species. Length-stratified sampling introduces additional complexity, requiring expansion of subsampled biological data to represent the full catch at the tow level (referred to as "first-stage expansion" at NOAA's Alaska Fisheries Science Center), prior to any further scaling to the survey-domain level.
 
 ## Evaluating model performance and limitations
 
@@ -12,33 +14,33 @@ The group discussed how to assess and communicate the limits of spatiotemporal m
 
 ::: {custom-style="List Number"}
 
-1. Posterior predictive checking (self-simulation) compares observed data to data simulated from the fitted model; a practical interpretation is a "Turing test," where model adequacy is supported if simulated data are indistinguishable from real observations. 
+1. Posterior predictive checking (self-simulation) compares observed data to data simulated from the fitted model; a practical interpretation is a "Turing test," where model adequacy is supported if simulated data are visually indistinguishable from real observations. 
 
-2. Data degradation uses high-quality datasets that are deliberately reduced to mimic data-poor conditions, allowing evaluation under realistic constraints, albeit without knowledge of the true state.
+2. Data degradation uses high-quality datasets that are deliberately reduced to mimic real-world survey effort reductions or survey area loss, allowing evaluation under realistic constraints, albeit without knowledge of the true state.
 
-3. Custom simulation (e.g., via the 'SimSurvey' R package) enables comparison to a known truth but is limited to processes specified by the analyst. 
+3. Custom simulation (e.g., via the 'SimSurvey' R package) enables comparison to a known truth but is limited to processes specified by the analyst and can be time consuming to design. 
 
 4. Sensitivity analyses can explore alternative model structures and mesh configurations and therefore provide insight into robustness to modelling decisions.
 
 :::
 
-The group highlighted several practical considerations. Spatiotemporal models are often challenged in areas with strong environmental gradients, where models may oversmooth important variation. As a result, the random effects in spatiotemporal models are generally better suited to broad-scale patterns than fine-scale prediction. The group noted triangle-level covariates on spatial covariance as a potential way to address some of these limitations, and research is ongoing in this area. The group also emphasized the distinction between model-based and design-based estimators: while model-based approaches relax assumptions such as within-stratum homogeneity, they shift the burden from perfect survey design implementation to model specification and choice, making sensitivity analyses and model-checking essential.
+The group highlighted several practical considerations. Spatiotemporal models are often challenged in areas with strong environmental gradients, where models may oversmooth important variation. As a result, the random effects in spatiotemporal models are generally better suited to broad-scale patterns than fine-scale prediction. The group also emphasized the distinction between model-based and design-based estimators: while model-based approaches relax assumptions such as within-stratum homogeneity, they shift the burden from optimizing survey design implementation to model specification and choice, making sensitivity analyses, model-checking, and established best practice guidelines essential.
 
 ## Data integration across surveys
 
 The integration of data across surveys was considered in several contexts, including adjacent surveys, overlapping surveys, and surveys covering different depth ranges, as well as increasing use of industry data. While integration can improve coverage, participants emphasized the need to first understand each dataset independently through separate modelling exercises. Furthermore, it was acknowledged that we do not yet understand how some of the more complex modelling options, such as spatially varying catchability, will behave under complex data integration exercises. 
 
-Preferential sampling---where sampling locations depend on prior knowledge of fish distribution---was identified as a concern because it violates core geostatistical assumptions. In practice, its effects are often modest and can be reduced by including relevant covariates that drive the preferential sampling. 
+Preferential sampling---where sampling locations depend on prior knowledge of fish distribution---was identified as a concern because it violates core geostatistical assumptions. A participant noted that in practice, its effects often appear modest and can be reduced by including relevant covariates that drive the preferential sampling. 
 
-Differences in survey timing present an additional challenge: without overlap in space or time, integration requires strong assumptions about fish behaviour and distribution. Targeted sampling to estimate differences in catchability or selectivity may be needed to support such integration.
+Differences in survey timing (e.g., across seasons) present an additional challenge: without overlap in space or time, integration requires strong assumptions about fish behaviour and distribution. Targeted sampling to estimate differences in catchability or selectivity may be needed to support such data integration.
 
 ## Alternatives to survey data integration
 
-Alternatives to data integration via spatiotemporal models were also discussed. One option is to include multiple indices separately in an assessment model, allowing the model to reconcile them; however, most assessment models do not make use of spatial information and assume each index is proportional to the entire stock. Assessment models are thus left to reconcile this through estimating separate selectivity curves. Spatial assessment models provide another option by partitioning populations and modelling movement, but movement is rarely known and difficult to estimate.
+Alternatives to data integration via spatiotemporal models were also discussed. One option is to include multiple indices separately in an assessment model, allowing the model to reconcile them; however, most assessment models do not make use of spatial information and assume each index is proportional to the entire stock abundance. Assessment models are thus left to reconcile this through estimating separate selectivity curves. Spatial assessment models provide another option by partitioning populations into internal "boxes" and modelling movement between boxes, but, in practice, movement is rarely known and is difficult to estimate.
 
 ## Future work and recommendations
 
-The group identified several priorities for future work:
+The group identified several priorities for future work that were then further discussed on the third day.
 
 ::: {custom-style="List Number"}
 
