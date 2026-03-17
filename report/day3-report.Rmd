@@ -4,11 +4,11 @@ Participants: Sean Anderson, Mackenzie Mazur, Meghan Burton, Kimberly Fitzpatric
 
 ## Overview
 
-The group developed a set of recommended potential activities to advance survey data standardization and integration at DFO. These recommendations emerged from two days of discussion and are organized around seven priority areas.
+The group developed a set of recommended potential activities to advance survey data standardization and integration at DFO. These recommendations emerged from two days of discussion and are organized around eight priority areas.
 
 ## Best practices for spatiotemporal modelling (TESA working group and workshop)
 
-The group recommended a two-phase approach to developing best practices for spatiotemporal model-based survey standardization. The first phase would be a blind simulation and modelling exercise, structured as a TESA working group, in which multiple regional teams independently fit the same simulated dataset without knowledge of the underlying data-generating process. This exercise would reveal how modelling choices differ across analysts and regions, providing insight into the sensitivity of results to analyst decisions. The simulated data would be generated using tools such as 'SimSurvey' or bespoke code and would aim to be broadly representative, encompassing different survey types (e.g., trawl, dive, trap), species ecologies, and including covariates that modellers would need to select from. The data would also include challenges such as gear changes within the time series. Each region would assemble a small team including analysts at different levels of expertise, and the primary output would be a standardized index of abundance.
+The group recommended a two-phase approach to developing best practices for spatiotemporal model-based survey standardization. The first phase would be a blind simulation and modelling exercise, structured as a TESA working group, in which multiple regional teams independently fit the same simulated dataset without knowledge of the underlying data-generating process. This exercise would reveal how modelling choices differ across analysts and regions, providing insight into the sensitivity of results to analyst decisions. The simulated data would be generated using tools such as 'SimSurvey' or bespoke code and would aim to be broadly representative, encompassing different survey types (e.g., trawl, dive, trap) and species ecologies, and including covariates that modellers would need to select from. The data would also include challenges such as gear changes within the time series. Each region would assemble a small team including analysts at different levels of expertise, and the primary output would be a standardized index of abundance.
 
 The results of the blind exercise would then kick off the second phase: a TESA workshop to develop a best practices paper. Participants would contrast and compare their modelling decisions at a workshop, and the insights would motivate and inform a best practices publication.
 
@@ -28,7 +28,7 @@ Developing workable solutions for model-based estimation of survey catch composi
 
 ## Consequences of choices in sampling composition data (collaborative research)
 
-A related but distinct priority is understanding the consequences of choices in the sampling of composition data and other biological samples and making efficient use of available sampling resources. This would involve closed-loop simulations examining consequences on quantities of management interest. Like the model-based composition work above, this was recommended as a collaborative research effort rather than a TESA activity.
+A related but distinct priority is understanding the consequences of choices in the sampling of composition data and other biological samples, and making efficient use of available sampling resources. This would involve closed-loop simulations examining consequences on quantities of management interest. Like the model-based composition work above, this was recommended as a collaborative research effort rather than a TESA activity.
 
 ## Multi-regional survey database (TESA workshop and working group)
 
